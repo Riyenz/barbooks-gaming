@@ -1,0 +1,58 @@
+.select-input {
+  position: relative;
+
+  &::before {
+    content: '\25BE';
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+  }
+
+  &__input {
+    position: relative;
+    padding: 0 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    font-size: 16px;
+    line-height: 40px;
+    outline: none;
+    background-color: transparent;
+    color: var(--text-color);
+    width: 100%;
+
+    &--readonly {
+      pointer-events: none;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    width: 100%;
+    background-color: var(--bg-color);
+    max-height: 10rem;
+    overflow-y: scroll;
+  }
+
+  &__option {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    &--disabled {
+      pointer-events: none;
+    }
+
+    &--selected {
+      color: var(--primary-color);
+    }
+  }
+}

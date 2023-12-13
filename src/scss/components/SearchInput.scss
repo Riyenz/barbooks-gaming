@@ -1,0 +1,26 @@
+.search {
+  position: relative;
+  width: 100%;
+  max-width: var(--screen-md);
+
+  &__input {
+    width: 100%;
+    padding: 0.25rem 1rem 0.25rem 3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    font-size: 16px;
+    line-height: 40px;
+    outline: none;
+    background-color: transparent;
+    color: var(--text-color);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

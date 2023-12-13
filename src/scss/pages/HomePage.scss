@@ -1,0 +1,63 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 8rem 6rem;
+    position: relative;
+    background: url('@/assets/images/background.png') no-repeat bottom center /
+      cover;
+    width: 100%;
+    min-height: 40vh;
+
+    &::before {
+      z-index: 0;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        rgba(27, 27, 36, 0) 20%,
+        var(--bg-color) 100%
+      );
+    }
+  }
+
+  &__title {
+    z-index: 10;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    color: transparent;
+    background-image: var(--gradient-text);
+    background-clip: text;
+  }
+
+  &__description {
+    z-index: 10;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__list {
+    width: 100%;
+    max-width: var(--screen-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+}
