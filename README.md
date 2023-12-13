@@ -1,3 +1,10 @@
+# React Barbooks Gamestore
+
+```
+npm install
+npm run dev
+```
+
 ### a. What kind libraries your project is using?
 
 - React
